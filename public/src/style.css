@@ -1,21 +1,121 @@
 * {
   margin: 0;
   padding: 0;
-  height: 100%;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Poppins", sans-serif;
 }
 
-.container {
+section {
+  background: url("images/background-image1.jpg") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: calc(100vh - 80px);
   width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  opacity: 0.5;
+}
+footer {
+  text-align: center;
+  background-color: white;
 }
 
-.container img {
+nav {
+  background-color: rgb(21, 37, 61);
+  height: 60px;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+}
+
+label.logo {
+  color: #ddd;
+  font-size: 35px;
+  line-height: 60px;
+  padding: 0px 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 25px;
+}
+
+nav ul li a {
+  color: #ddd;
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #ddd;
+  color: rgb(21, 37, 61);
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: #ddd;
+  float: right;
+  line-height: 60px;
+  margin-right: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: dodgerblue;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a.active,
+  a:hover {
+    background: none;
+    color: rgb(21, 37, 61);
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
 }
