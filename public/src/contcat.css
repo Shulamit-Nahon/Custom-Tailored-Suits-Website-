@@ -2,14 +2,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
   font-family: "Poppins", sans-serif;
+  background-color: #ddd;
 }
 
 body {
   width: 100%;
   min-height: 100vh;
-  background-color: rgb(10, 29, 58);
-  color: white;
+  background-color: #ddd;
+  color: black;
 }
 
 .container {
@@ -45,14 +48,14 @@ body {
 section.left .contactTitle h2 {
   position: relative;
   font-size: 28px;
-  color: #ddd;
+  color: rgb(10, 29, 58);
   display: inline-block;
   margin-bottom: 25px;
 }
 
 section.left .contactTitle p {
   font-size: 17px;
-  color: #ccc;
+  color: rgb(10, 29, 58);
   letter-spacing: 1px;
   line-height: 1.2;
   padding-bottom: 22px;
@@ -71,7 +74,7 @@ section.left .contactInfo {
 .iconGroup .icons {
   width: 45px;
   height: 45px;
-  border: 2px solid dodgerblue;
+  border: 2px solid rgb(10, 29, 58);
   border-radius: 50%;
   margin-right: 20px;
   position: relative;
@@ -79,7 +82,7 @@ section.left .contactInfo {
 
 .iconGroup .icons i {
   font-size: 20px;
-  color: #ddd;
+  color: rgb(10, 29, 58);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,7 +97,7 @@ section.left .contactInfo {
 
 .iconGroup .details span:nth-child(1) {
   text-transform: uppercase;
-  color: #ccc;
+  color: rgb(10, 29, 58);
 }
 
 section.left .socialMedia {
@@ -112,12 +115,12 @@ section.left .socialMedia {
   text-align: center;
   margin-right: 15px;
   border-radius: 5px;
-  background-color: dodgerblue;
+  background-color: rgb(10, 29, 58);
   transition: 0.4s;
 }
 
 .socialMedia a i {
-  color: #ddd;
+  color: rgb(10, 29, 58);
   font-size: 18px;
   line-height: 35px;
   border: 1px solid transparent;
@@ -159,8 +162,8 @@ section.left .socialMedia {
   width: 100%;
   font-size: 18px;
   padding: 2px, 0px;
-  background-color: rgb(10, 29, 58);
-  color: #ddd;
+  background-color: #ddd;
+  color: rgb(10, 29, 58);
   border: none;
   border-bottom: 2px solid #666;
   outline: none;
@@ -181,7 +184,7 @@ textarea::-webkit-scrollbar-track {
 }
 
 textarea::-webkit-scrollbar-thumb {
-  background-color: dodgerblue;
+  background-color: rgb(10, 29, 58);
   border-radius: 15px;
 }
 
@@ -211,7 +214,7 @@ textarea::-webkit-scrollbar-thumb {
   padding: 8px 20px;
   margin-top: 40px;
   font-size: 18px;
-  background-color: dodgerblue;
+  background-color: rgb(10, 29, 58);
   color: #ddd;
   border: 1px solid transparent;
   border-radius: 25px;
@@ -242,5 +245,117 @@ textarea::-webkit-scrollbar-thumb {
   .row section.right {
     flex-basis: 100%;
     margin: 0px;
+  }
+}
+
+/*Navbar added from index.html*/
+
+.logo-container {
+  background-color: #ddd;
+
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgb(21, 37, 61);
+}
+
+.logo-container img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+nav {
+  background-color: #ddd;
+  background-size: cover;
+  height: 60px;
+  width: 100%;
+}
+
+nav ul {
+  text-align: center;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 60px;
+  margin: 0px 25px;
+}
+
+nav ul li a {
+  color: rgb(21, 37, 61);
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: rgb(21, 37, 61);
+  color: #ddd;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: rgb(21, 37, 61);
+  float: right;
+  line-height: 60px;
+  margin-right: 35px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1100px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #ddd;
+    top: 120px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+  a.active,
+  a:hover {
+    background: #ddd;
+    color: rgb(21, 37, 61);
+  }
+
+  #check:checked ~ ul {
+    left: 0;
   }
 }

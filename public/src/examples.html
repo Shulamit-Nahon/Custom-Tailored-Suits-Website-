@@ -3,32 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Responsive Image</title>
+    <title>Table with Title</title>
     <style>
-      body,
-      html {
-        margin: 0;
-        padding: 0;
-        height: 100%;
+      .table-container {
+        width: 85%; /* Ensure the width is consistent with the table */
+        margin: auto;
+        margin-bottom: 30px;
       }
-      .container {
-        width: 100%;
-        height: 100vh;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+      .table-title {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        text-align: left; /* Aligns the title to the left */
       }
-      .container img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+      table {
+        width: 100%; /* Use 100% width of the container */
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <img src="images/logo-image.jpg" alt="Responsive Image" />
+    <div class="table-container">
+      <div class="table-title">Table Title</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Header 1</th>
+            <th>Header 2</th>
+            <th>Header 3</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+            <td>Data 3</td>
+          </tr>
+          <tr>
+            <td>Data 4</td>
+            <td>Data 5</td>
+            <td>Data 6</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
 </html>
