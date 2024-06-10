@@ -3,60 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table with Title</title>
+    <title>Navbar with Search</title>
     <style>
-      .table-container {
-        width: 85%; /* Ensure the width is consistent with the table */
-        margin: auto;
-        margin-bottom: 30px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      .table-title {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        text-align: left; /* Aligns the title to the left */
+      .slider,
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 100vh; /* Full height of the viewport */
+        overflow: hidden; /* Hide overflow to ensure the image fits well */
       }
 
-      table {
-        width: 100%; /* Use 100% width of the container */
-        border-collapse: collapse;
+      .slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Cover the entire container */
       }
 
-      th,
-      td {
-        border: 1px solid #ddd;
-        padding: 8px;
-      }
-
-      th {
-        background-color: #f2f2f2;
+      .slide-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.5
+        ); /* Optional: add background for better text visibility */
+        padding: 10px;
+        border-radius: 5px;
       }
     </style>
   </head>
   <body>
-    <div class="table-container">
-      <div class="table-title">Table Title</div>
-      <table>
-        <thead>
-          <tr>
-            <th>Header 1</th>
-            <th>Header 2</th>
-            <th>Header 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Data 1</td>
-            <td>Data 2</td>
-            <td>Data 3</td>
-          </tr>
-          <tr>
-            <td>Data 4</td>
-            <td>Data 5</td>
-            <td>Data 6</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="slider">
+      <div class="slide">
+        <img src="images/img5.jpg" alt="Slide 1" />
+        <div class="slide-text">
+          <h2>Slider Heading 1</h2>
+          <p>Description of slide 1</p>
+        </div>
+      </div>
     </div>
+    <h1>hey</h1>
   </body>
 </html>
